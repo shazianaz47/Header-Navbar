@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Topheader from "./components/Topheader";
+import Navbar from "./components/Navbar";
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -28,7 +32,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Topheader/>
+        <Navbar/>
+        <main className="max-w-7xl mx-auto container">{children}</main>
+        
       </body>
     </html>
   );
